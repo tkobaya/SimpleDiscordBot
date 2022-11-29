@@ -16,17 +16,17 @@ apply plugin: 'application'
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    //jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    // This dependency is found on compile classpath of this component and consumers.
-    compile 'com.google.guava:guava:23.0'
-
-    // Use JUnit test framework
-    testCompile 'junit:junit:4.12'
+    implementation group: 'net.dv8tion', name: 'JDA', version: '5.0.0-beta.1'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.3'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.3'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
 }
 
 // Define the main class for the application
-mainClassName = 'App'
+mainClassName = 'SimpleBot'
 
